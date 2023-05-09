@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/polifonia/ontology/music-algorithm/"
      xml:base="https://w3id.org/polifonia/ontology/music-algorithm/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:mr="https://w3id.org/polifonia/ontology/music-representation/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:algo="https://w3id.org/polifonia/ontology/algorithm-pattern/"
+     xmlns:onto="https://w3id.org/afo/onto/1.1#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -26,6 +29,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/afo/onto/1.1#Operation -->
+
+    <owl:Class rdf:about="https://w3id.org/afo/onto/1.1#Operation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/afo/onto/1.1#OperationSequence -->
+
+    <owl:Class rdf:about="https://w3id.org/afo/onto/1.1#OperationSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/afo/onto/1.1#Parameter -->
+
+    <owl:Class rdf:about="https://w3id.org/afo/onto/1.1#Parameter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Parameter"/>
+    </owl:Class>
     
 
 
