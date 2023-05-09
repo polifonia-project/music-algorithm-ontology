@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/polifonia/ontology/algorithm-pattern/"
+     xml:base="https://w3id.org/polifonia/ontology/algorithm-pattern/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/accomplishes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/accomplishes">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Goal"/>
+        <rdfs:comment>Relation between a task and the goal accomplished.</rdfs:comment>
+        <rdfs:label>accomplishes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/dependsOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/dependsOn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:comment>Relation between two dependant tasks.</rdfs:comment>
+        <rdfs:label>depends on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasAuthor">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Agent"/>
+        <rdfs:comment>Relation between an algorithm and an author.</rdfs:comment>
+        <rdfs:label>has author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasParameter -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasParameter">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Parameter"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Parametrization"/>
+        <rdfs:comment>Relation between a parametrization situation and a parameter.</rdfs:comment>
+        <rdfs:label>hasParameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasPerformance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasPerformance">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Performance"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:comment>Relation between an algorithm and a measured performance.</rdfs:comment>
+        <rdfs:label>has performance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasProcess -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasProcess">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskProcessingSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:comment>Relation between a task and the goal accomplished.</rdfs:comment>
+        <rdfs:label>accomplishes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/implementedUsing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/implementedUsing">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ExecutableFormalisation"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ProgrammingLanguage"/>
+        <rdfs:comment>Relation between an implemented algorithm and a programming language used to implement it.</rdfs:comment>
+        <rdfs:label>implemented using</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/involves -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/involves">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskProcessingSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessedEntity"/>
+        <rdfs:comment>Entity involved in a task processing situation.</rdfs:comment>
+        <rdfs:label>involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isBasedOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isBasedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:comment>Relation between two algorithms where the object is based on the latter.</rdfs:comment>
+        <rdfs:label>is based on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isDescribedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Formalization"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessedEntity"/>
+        <rdfs:comment>Entity involved in a task processing situation.</rdfs:comment>
+        <rdfs:label>involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isFormalizedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isFormalizedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskProcessingSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessedEntity"/>
+        <rdfs:comment>Relates an entity to the task it is involved to.</rdfs:comment>
+        <rdfs:label>involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isOfProcessingType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isOfProcessingType">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskProcessingSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessingType"/>
+        <rdfs:comment>Relation between a task and the goal accomplished.</rdfs:comment>
+        <rdfs:label>is of processing type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isOfTaskType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isOfTaskType">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskType"/>
+        <rdfs:comment>Relation between a task and a task type.</rdfs:comment>
+        <rdfs:label>is of task type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isOfType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isOfType">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Parameter"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ParameterType"/>
+        <rdfs:comment>Relation between a parameter and a type.</rdfs:comment>
+        <rdfs:label>is of parameter type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/isRealizedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/isRealizedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Formalization"/>
+        <rdfs:comment>Relation between an algorithm and a formalization of that algorithm.</rdfs:comment>
+        <rdfs:label>is realized in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/measures -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/measures">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Performance"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:comment>Relation a performance and a task it is measuring.</rdfs:comment>
+        <rdfs:label>measures</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/obtainedWith -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/obtainedWith">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Performance"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Parametrization"/>
+        <rdfs:comment>Relation between a performance and the parametrisation it has been used to obtain it.</rdfs:comment>
+        <rdfs:label>obtained with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/outputs -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/outputs">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ExecutableFormalisation"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Output"/>
+        <rdfs:comment>Relation between an executable formalization and an output of that formalisation.</rdfs:comment>
+        <rdfs:label>produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/performsTask -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/performsTask">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:comment>Relation between an algorithm and a task it performs.</rdfs:comment>
+        <rdfs:label>performs task</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/producesOutput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/producesOutput">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Relation between a task and an output it produces measuring.</rdfs:comment>
+        <rdfs:label>measures</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/refersTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/refersTo">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessedEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Relation between a processed entity and the original entity.</rdfs:comment>
+        <rdfs:label>refers to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/requiresInput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/requiresInput">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Relation between a task and an input it produces requires.</rdfs:comment>
+        <rdfs:label>requires input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/uses -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/uses">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:comment>Dependency relation between two algorithms.</rdfs:comment>
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasAmount -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasAmount">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Quantity of data.</rdfs:comment>
+        <rdfs:label>has amount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasInception -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasInception">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Relation between an algorithm and its inception date.</rdfs:comment>
+        <rdfs:label>has inception</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasLink -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasLink">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Link to a resource related to the algorithm</rdfs:comment>
+        <rdfs:label>has link</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/hasValue">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Relation between a parameter and its value.</rdfs:comment>
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Agent">
+        <rdfs:comment>An agent is an entity that is involved into the creation process of an algorithm.</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Algorithm">
+        <rdfs:comment>TBD</rdfs:comment>
+        <rdfs:label>Algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ComputationalComplexity -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ComputationalComplexity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/PerformanceMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Data -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Data"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/DataRole -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/DataRole"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ExecutableFormalisation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ExecutableFormalisation"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ExecutableFormalization -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ExecutableFormalization"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Formalization -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Formalization"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Goal -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Goal"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/License -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/License"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Metric -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Metric">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/PerformanceMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Output -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Output"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Parameter -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Parameter"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ParameterType -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ParameterType"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Parametrization -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Parametrization"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Performance -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Performance"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/PerformanceMeasure -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/PerformanceMeasure"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessedEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessedEntity"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessingRole -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessingRole"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessingType -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ProcessingType"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/ProgrammingLanguage -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/ProgrammingLanguage"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/PublicImplementation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/PublicImplementation"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/Task -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/Task"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/TaskProcessingSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskProcessingSituation"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/TaskType -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/TaskType"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/algorithm-pattern/TheoreticalFormalisation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/TheoreticalFormalisation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
