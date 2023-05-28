@@ -1,4 +1,4 @@
-# music-algorithm
+# Music Algorithm Ontology
 An ontology to describe music algorithms, their implementation and results
 
 [![DOI](https://zenodo.org/badge/372536364.svg)](https://zenodo.org/badge/latestdoi/372536364)
