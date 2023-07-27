@@ -15,8 +15,24 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-algorithm/">
+        <owl:versionIRI rdf:resource="https://w3id.org/polifonia/ontology/music-algorithm/1.0/"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/algorithm-pattern/"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/music-representation/"/>
+        <dc:creator xml:lang="en">Jacopo de Berardinis</dc:creator>
+        <dc:creator xml:lang="en">Nicolas Lazzari</dc:creator>
+        <dc:creator xml:lang="en">Andrea Poltronieri</dc:creator>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <rdfs:comment xml:lang="en">The Music Algorithm ontology describes information related to computational methods for music analysis and their output. It is based on the Algorithm Ontology Design Pattern.</rdfs:comment>
+        <rdfs:label xml:lang="en">Music Algorithm Ontology</rdfs:label>
+        <dc:title xml:lang="en">Music Algorithm Ontology</dc:title>
+        <dc:description xml:lang="en">The Music Algorithm ontology describes information related to computational methods for music analysis and their output. It is based on the Algorithm Ontology Design Pattern.</dc:description>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:modified>"2023-05-09"^^xsd:date</terms:modified>
+        <terms:issued>"2023-04-12"^^xsd:date</terms:issued>
+        <vann:preferredNamespacePrefix>ma:</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/polifonia/ontology/music-algorithm/</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
