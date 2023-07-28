@@ -2,12 +2,31 @@
 <rdf:RDF xmlns="https://w3id.org/polifonia/ontology/algorithm-pattern/"
      xml:base="https://w3id.org/polifonia/ontology/algorithm-pattern/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/"/>
-    
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/algorithm-pattern/">
+        <dc:creator xml:lang="en">Nicolas Lazzari</dc:creator>
+        <dc:creator xml:lang="en">Jacopo de Berardinis</dc:creator>
+        <dc:creator xml:lang="en">Andrea Poltronieri</dc:creator>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <rdfs:comment xml:lang="en">The Algorithm Ontology Design Pattern (ODP) describe computational procedures and their relationships, their parametrisation, metadata, and relationships with input and output data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Algorithm ODP</rdfs:label>
+        <dc:title xml:lang="en">Algorithm ODP</dc:title>
+        <dc:description xml:lang="en">The Algorithm Ontology Design Pattern describe computational procedures and their relationships, their parametrisation, metadata, and relationships with input and output data.</dc:description>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:modified>"2023-05-09"^^xsd:date</terms:modified>
+        <terms:issued>"2023-04-12"^^xsd:date</terms:issued>
+        <vann:preferredNamespacePrefix>algo:</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/polifonia/ontology/algorithm-pattern/</vann:preferredNamespaceUri>
+    </owl:Ontology>
 
 
     <!-- 
